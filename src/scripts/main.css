@@ -1,0 +1,107 @@
+.container {
+  display: grid;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('../images/nuvem.jpg');
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  height: 90px;
+  width: 100%;
+  border-bottom: 5px solid #ffd700;
+}
+
+.panel {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.square {
+  height: 70px;
+  width: 70px;
+  border: 1px solid #000000;
+  background-image: url('../images/porta.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy {
+  background-image: url('../images/monstro.png');
+  background-size: cover;
+}
+
+.menu-lives {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* adicionar espaçamento entre 2 elementos específicos
+
+1º jeito: criando uma classe para o elemento 
+
+.second {
+  margin-top: 10px;
+}*/
+
+/*2º jeito: pegando o 2º filho do elemento pai*/
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.ranking {
+  text-align: center; 
+  background-color: #04257a;
+  padding: 1rem;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
+  width: 600px;
+  margin: 1rem auto;
+  color: #f3f2f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ranking ol:nth-child(2) {  
+  padding-left: 65px;
+  margin-top: 10px;
+}
+
+.ranking li {
+  width: 300px;
+  text-align: left;  
+  margin-top: 5px;
+}
+
+.ranking li::marker {
+  color: red;
+}
+
+.game-controls {
+  text-align: center;
+  display: block;
+}
+
+#start-game, 
+#exit-game {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #30d2ef;
+  border: 2px solid #000000;
+  cursor: pointer;  
+  border-radius: 5px;
+}
+
+#start-game:hover,
+#exit-game:hover {
+  background-color: #184c9f;
+}
